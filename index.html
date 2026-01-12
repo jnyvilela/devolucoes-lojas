@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copia Rapamax</title>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: white; padding: 10px; margin: 0; }
+        .container { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: #1e1e1e; padding: 15px; border-radius: 20px; text-align: center; border: 2px solid #333; }
+        h2 { margin: 0 0 10px 0; font-size: 2rem; color: #00d4ff; }
+        button { 
+            width: 100%; 
+            padding: 50px 20px; /* Botão gigante para tela ruim */
+            font-size: 2.5rem; 
+            font-weight: bold; 
+            background: #007AFF; 
+            color: white; 
+            border: none; 
+            border-radius: 15px; 
+            text-transform: uppercase;
+        }
+        button:active { background: #3293ff; transform: scale(0.95); }
+        .bg-lord { background: #5856D6; }
+        .bg-wm { background: #FF9500; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>MAXIMUS</h2>
+            <button onclick="copy('8C293CF9')">COPIAR</button>
+        </div>
+        <div class="card">
+            <h2>LORD</h2>
+            <button class="bg-lord" onclick="copy('FF3AA7DD')">COPIAR</button>
+        </div>
+        <div class="card">
+            <h2>WM</h2>
+            <button class="bg-wm" onclick="copy('09C4183A')">COPIAR</button>
+        </div>
+    </div>
+
+    <script>
+        function copy(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("COPIADO: " + text);
+            });
+        }
+    </script>
+</body>
+</html>
