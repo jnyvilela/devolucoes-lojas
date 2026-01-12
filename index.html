@@ -3,50 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copia Rapamax</title>
+    <title>Painel Rapamax & Películas</title>
     <style>
         body { font-family: sans-serif; background: #121212; color: white; padding: 10px; margin: 0; }
-        .container { display: flex; flex-direction: column; gap: 20px; }
+        .section { margin-bottom: 30px; border-bottom: 2px dashed #333; padding-bottom: 20px; }
+        h1 { text-align: center; color: #00d4ff; font-size: 1.5rem; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
         .card { background: #1e1e1e; padding: 15px; border-radius: 20px; text-align: center; border: 2px solid #333; }
-        h2 { margin: 0 0 10px 0; font-size: 2rem; color: #00d4ff; }
-        button { 
-            width: 100%; 
-            padding: 50px 20px; /* Botão gigante para tela ruim */
-            font-size: 2.5rem; 
-            font-weight: bold; 
-            background: #007AFF; 
-            color: white; 
-            border: none; 
-            border-radius: 15px; 
-            text-transform: uppercase;
+        h2 { margin: 0 0 10px 0; font-size: 1.8rem; }
+        
+        /* Botões de Cópia */
+        .btn-copy { 
+            width: 100%; padding: 45px 10px; font-size: 2.2rem; font-weight: bold; 
+            color: white; border: none; border-radius: 15px; cursor: pointer;
         }
-        button:active { background: #3293ff; transform: scale(0.95); }
+        .bg-maximus { background: #007AFF; }
         .bg-lord { background: #5856D6; }
         .bg-wm { background: #FF9500; }
+        .bg-alpha { background: #FF3B30; } /* Vermelho para a Alpha */
+
+        /* Área de Películas */
+        textarea { 
+            width: 95%; height: 150px; background: #333; color: white; border-radius: 10px; 
+            padding: 10px; font-size: 1.2rem; border: 2px solid #555;
+        }
+        .btn-format { 
+            background: #28a745; width: 100%; padding: 30px; font-size: 1.5rem; 
+            font-weight: bold; color: white; border: none; border-radius: 15px; margin-top: 10px;
+        }
+        
+        button:active { transform: scale(0.95); opacity: 0.8; }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <h1>CÓDIGOS DE DEVOLUÇÃO</h1>
+    <div class="section grid">
         <div class="card">
             <h2>MAXIMUS</h2>
-            <button onclick="copy('8C293CF9')">COPIAR</button>
+            <button class="btn-copy bg-maximus" onclick="copy('8C293CF9')">8C293CF9</button>
         </div>
         <div class="card">
             <h2>LORD</h2>
-            <button class="bg-lord" onclick="copy('FF3AA7DD')">COPIAR</button>
+            <button class="btn-copy bg-lord" onclick="copy('FF3AA7DD')">FF3AA7DD</button>
         </div>
         <div class="card">
             <h2>WM</h2>
-            <button class="bg-wm" onclick="copy('09C4183A')">COPIAR</button>
+            <button class="btn-copy bg-wm" onclick="copy('09C4183A')">09C4183A</button>
         </div>
-    </div>
-
-    <script>
-        function copy(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert("COPIADO: " + text);
-            });
-        }
-    </script>
-</body>
-</html>
+        <div class="card">
+            <h2>ALPHA</h2>
+            <button class="btn-copy bg-alpha" onclick="copy('A43
