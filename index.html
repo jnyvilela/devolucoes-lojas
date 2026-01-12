@@ -3,89 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Códigos Lojas</title>
+    <title>Códigos do Dia</title>
     <style>
-        /* Reset básico e fundo escuro para economizar bateria/vista */
-        body { 
-            font-family: Arial, sans-serif; 
-            background-color: #000; 
-            margin: 0; 
-            padding: 10px; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-            height: 100vh;
-        }
-
-        /* Estilo dos Botões Gigantes */
-        button {
-            flex: 1; /* Faz os botões dividirem a tela igualmente */
-            width: 100%;
-            border: none;
-            border-radius: 15px;
-            color: white;
-            font-size: 2.5rem; /* Texto bem grande */
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Efeito ao tocar */
-        button:active {
-            transform: scale(0.96);
-            opacity: 0.9;
-        }
-
-        /* Cores distintas para cada loja */
-        .maximus { background-color: #007AFF; } /* Azul */
-        .lord    { background-color: #5856D6; } /* Roxo */
-        .wm      { background-color: #FF9500; } /* Laranja */
-        .alpha   { background-color: #FF3B30; } /* Vermelho */
-
-        /* Texto pequeno do código abaixo do nome */
-        span {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            margin-top: 5px;
-            font-family: monospace;
-        }
+        body { font-family: Arial, sans-serif; background-color: #000; margin: 0; padding: 10px; display: flex; flex-direction: column; gap: 15px; height: 100vh; }
+        button { flex: 1; width: 100%; border: none; border-radius: 15px; color: white; font-size: 2.5rem; font-weight: bold; text-transform: uppercase; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        button:active { transform: scale(0.96); opacity: 0.9; }
+        .maximus { background-color: #007AFF; }
+        .lord    { background-color: #5856D6; }
+        .wm      { background-color: #FF9500; }
+        .alpha   { background-color: #FF3B30; }
+        span { font-size: 1.2rem; opacity: 0.8; margin-top: 5px; font-family: monospace; }
+        .atualizado { color: #555; font-size: 0.8rem; text-align: center; margin-top: 5px; }
     </style>
 </head>
 <body>
+    <button class="maximus" onclick="copy('8C293CF9')">MAXIMUS<span>8C293CF9</span></button>
+    <button class="wm" onclick="copy('09C4183A')">WM<span>09C4183A</span></button>
+    <button class="alpha" onclick="copy('A4361081')">ALPHA<span>A4361081</span></button>
+    <button class="lord" onclick="copy('FF3AA7DD')">LORD<span>FF3AA7DD</span></button>
 
-    <button class="maximus" onclick="copy('8C293CF9')">
-        MAXIMUS
-        <span>8C293CF9</span>
-    </button>
-
-    <button class="lord" onclick="copy('FF3AA7DD')">
-        LORD
-        <span>FF3AA7DD</span>
-    </button>
-
-    <button class="wm" onclick="copy('09C4183A')">
-        WM
-        <span>09C4183A</span>
-    </button>
-
-    <button class="alpha" onclick="copy('A4361081')">
-        ALPHA
-        <span>A4361081</span>
-    </button>
+    <div class="atualizado">Última atualização: 12/01 13:52</div>
 
     <script>
         function copy(text) {
             navigator.clipboard.writeText(text).then(() => {
-                // Feedback visual simples (vibrar se o navegador permitir)
                 if (navigator.vibrate) navigator.vibrate(50);
                 alert("COPIADO: " + text);
-            }).catch(err => {
-                alert("Erro ao copiar. Tente novamente.");
             });
         }
     </script>
